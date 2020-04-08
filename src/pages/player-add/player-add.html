@@ -1,0 +1,87 @@
+<!--
+  Generated template for the PlayerAddPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+<!-- <ion-title>In Add Player</ion-title> -->
+</ion-header>
+
+
+<ion-content padding class="guide-modal main-view">
+    <div class="player_modal_content">
+      <!-- <div class="close" (click)="dismiss()">X</div> -->
+      <ion-buttons right>
+        <button ion-button icon-only style="background: transparent !important;" (click)="dismiss()">
+          <ion-icon name="close-circle"></ion-icon>
+        </button>
+      </ion-buttons>
+      <h4>Add Player</h4>
+    
+    <div class="jersey-display">
+    
+    <form [formGroup]="addPlayerForm">
+      <ion-grid>
+        <ion-row>
+          <ion-col col-3>
+            <ion-input type="text" [formControl]="addPlayerForm.controls['name']" placeholder="Name"></ion-input>
+          </ion-col>
+          <ion-col col-3>
+            <ion-input type="number" [formControl]="addPlayerForm.controls['jerseyNo']" placeholder="Jersey No."></ion-input>
+          </ion-col>
+          <ion-col col-2>
+              <button ion-button class="button-upload" (click)="presentActionSheet('logo')">
+                  <ion-icon name="camera"></ion-icon></button> 
+                </ion-col>
+          <ion-col col-4>
+            <div class="select">
+              <ion-checkbox  class="checkbox" [formControl]="addPlayerForm.controls['isGoalkeeper']"  (ionChange)="onGoalKeeperClick()" > </ion-checkbox> Goalkeeper </div>
+          </ion-col>
+        </ion-row>
+
+        <ion-row>
+            <!-- <ion-col col-4></ion-col> -->
+            <ion-col>
+              <ion-label>* Upload square Images</ion-label>
+            </ion-col>
+        </ion-row>
+
+        <ion-row *ngIf="photo">
+            <ion-col col-3></ion-col>
+            <ion-col>
+              <img src={{photo}} *ngIf="photo" style="height: 35px;width: 35px;padding-bottom: 0px;margin-bottom: 0px" />
+            </ion-col>
+        </ion-row>
+
+        <!-- <ion-row>
+          <ion-col col-3>
+            <ion-input type="text" value="" placeholder="Name"></ion-input>
+          </ion-col>
+          <ion-col col-3>
+            <ion-input type="text" value="" placeholder="Jersey No."></ion-input>
+          </ion-col>
+          <ion-col col-3>
+            <input type="file" (change)="fileUpload($event)" id="file-input" style="opacity: 0" #fileInp>
+            <button ion-button (click)="onClick()" class="button-upload">Upload Logo</button>
+          </ion-col>
+          <ion-col col-3>
+            <div class="select">
+              <ion-checkbox class="checkbox"> </ion-checkbox> Players</div>
+          </ion-col>
+        </ion-row> -->
+      
+        <ion-row>
+          <ion-col col-12>
+            <button ion-button (click)="onSavePlayer()" class="button-add">Add</button>
+          </ion-col>
+        </ion-row>
+      
+      </ion-grid>
+    </form>
+    
+    
+    </div>
+    </div>
+  </ion-content>
+

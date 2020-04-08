@@ -1,0 +1,35 @@
+<div class="tabs-container">
+
+  <ion-segment [(ngModel)]="icons" color="secondary" >
+    <ion-segment-button (click)="pushPage('Team')" [ngClass]="(activeTab=='Team')?'activetab':'inactivetab'" >
+      <img id="ionic-docs-text" src="./assets/imgs/team.svg">
+      <p>Team</p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="pushPage('Jersey')"  [ngClass]="(activeTab=='Jersey')?'activetab':'inactivetab'" >
+      <img id="ionic-docs-text" src="./assets/imgs/jersey.svg">
+       <p>Jersey</p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="pushPage('Ground')"  [ngClass]="(activeTab=='Ground')?'activetab':'inactivetab'" >
+      <img id="ionic-docs-text" src="./assets/imgs/ground.svg">
+       <p>Ground</p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="pushPage('Tools')" [ngClass]="(activeTab=='Tools')?'activetab':'inactivetab'"  >
+      <img id="ionic-docs-text" src="./assets/imgs/tools.svg">
+       <p>Tools</p>
+      <!-- hammer -->
+    </ion-segment-button>
+
+    <ion-segment-button (click)="pushPage('Settings')" [ngClass]="(activeTab=='Settings')?'activetab':'inactivetab'"  >
+     <img id="ionic-docs-text" src="./assets/imgs/settings.svg">
+      <p>Settings</p>
+    </ion-segment-button>
+
+    <ion-segment-button (click)="pushPage('Save')"  class="btn_padding">
+       <img id="ionic-docs-text" src="{{buttonMode}}">
+    </ion-segment-button>
+  </ion-segment>
+</div>
+

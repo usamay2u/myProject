@@ -1,0 +1,54 @@
+<!-- Generated template for the FooterComponent component -->
+<ion-footer class="footer_new">
+  <div class="bar bar-footer bar-balanced">
+   <ion-grid >
+      <ion-row>
+        <ion-col col-2 class="hamburger padd-top">
+          <ion-list >
+            <ion-item class="menu_div">
+                <button class="menu_button" menuToggle (click)="openMenu()"> <ion-icon name="menu"></ion-icon></button>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col col-3 class="padd-top">
+          <ion-list>
+            <ion-item>
+              <!-- <ion-label *ngIf="league == 'League' || tabname==null" style="padding: 0 0;">Select Your League</ion-label> -->
+              <ion-label *ngIf="league == 'League' || league==undefined || league=='' || league==null" style="padding: 0 0;">Select Your League</ion-label>
+              <ion-select #selectLeague [(ngModel)]="league"  (ngModelChange)="leagueSelected()" name="league" >
+                <ion-option  *ngFor="let row of leagueDetails" value="{{row.id}}" (cancel)="onCancel()"  >{{row.name}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+      <ion-col col-3 class="padd-top">
+        <ion-list>
+          <ion-item>
+            <ion-label *ngIf="team == 'Team' || team==undefined || team=='' || team==null">Select Your Team</ion-label>
+              <ion-select [(ngModel)]="team" (ngModelChange)="teamSelected(team)" >
+                  <ion-option *ngFor="let row of teamsList" value="{{row.id}}" (cancel)="onCancel()" >{{row.name}}</ion-option>
+              </ion-select>
+          </ion-item>
+        </ion-list>
+      </ion-col>
+
+    <ion-col col-2 class="padd-top">
+      <!--  <img src="./assets/imgs/go-button-home.png" (click)="clickGo($event)" *ngIf="currentPage == 'HomePage'" />-->
+        <img src="./assets/imgs/go-button.svg" (click)="clickGo($event)"  />
+
+        <!--<button (click)="clickGo($event)" class="go">Go <br /></button>
+        <button  class="team" (click)=presentPage() >Custom <br /> Team</button>-->
+    </ion-col>
+
+    <ion-col col-2 class="padd-top">
+    <!--  <img src="./assets/imgs/go-button-home.png" (click)="clickGo($event)" *ngIf="currentPage == 'HomePage'" />-->
+      <img src="./assets/imgs/make-your-team.svg" *ngIf="activeTabnameNew" (click)="presentPage()" />
+      <img src="./assets/imgs/make-your-team.svg" *ngIf="!activeTabnameNew" (click)="showAlert()" />
+    </ion-col>
+
+  </ion-row>
+  </ion-grid>
+</div>
+</ion-footer>

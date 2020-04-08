@@ -1,0 +1,95 @@
+<!-- Generated template for the ToolsComponent component -->
+<!-- <ion-row>
+  <ion-col col-12 >
+    <ion-segment [(ngModel)]="icons" color="secondary" style="height: 50px !important">
+      <ion-segment-button (click)="pushPage('Arrow')" [ngClass]="(activeToolName=='Arrow')?'active':''" >
+        <img id="ionic-docs-text" src="./assets/imgs/arrow.svg">
+        <p class="tool_div">Arrow</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Circle')" [ngClass]="(activeToolName=='Circle')?'active':''" >
+           <img id="ionic-docs-text" src="./assets/imgs/circle.svg">
+            <p class="tool_div">Circle</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Rectangle')" [ngClass]="(activeToolName=='Rectangle')?'active':''" >
+        <img id="ionic-docs-text" src="./assets/imgs/rectangle.svg">
+         <p class="tool_div">Rectangle</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Pencil')" [ngClass]="(activeToolName=='Pencil')?'active':''" >
+        <img id="ionic-docs-text" src="./assets/imgs/pencil.svg">
+         <p class="tool_div">Pencil</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Eraser')" >
+         <img id="ionic-docs-text" src="./assets/imgs/eraser.svg">
+          <p class="tool_div">Clear</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Undo')" >
+        <img id="ionic-docs-text" src="./assets/imgs/undo.svg">
+         <p class="tool_div">Undo</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Redo')" >
+        <img id="ionic-docs-text" src="./assets/imgs/redo.svg">
+         <p class="tool_div">Redo</p>
+      </ion-segment-button>
+      <ion-segment-button (click)="pushPage('Football')" [ngClass]="(showBall==true)?'active':''" >
+        <img id="ionic-docs-text" src="./assets/imgs/football.svg">
+        <p class="tool_div"></p>
+      </ion-segment-button>
+    </ion-segment> 
+  </ion-col>
+</ion-row>   -->
+
+<div>
+  <ion-row class="section_height">
+    <ion-col col-2 class="selected">  
+      <img *ngIf="activeToolName=='Arrow'" class="tool_img" src="./assets/imgs/arrow.svg"/>
+      <img *ngIf="activeToolName=='Circle'" class="tool_img" src="./assets/imgs/circle.svg"/>
+      <img *ngIf="activeToolName=='Rectangle'" class="tool_img" src="./assets/imgs/rectangle.svg"/>
+      <img *ngIf="activeToolName=='Pencil'" class="tool_img" src="./assets/imgs/pencil.svg"/>
+    </ion-col>
+
+    <ion-col col-10 class="outer_div">
+      <div class="slider_div">
+        <ion-slides slidesPerView="5">
+          <ion-slide class="div_padding" (click)="pushPage('Arrow')">
+            <img src="./assets/imgs/arrow.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Arrow</label>
+          </ion-slide>
+  
+          <ion-slide class="div_padding" (click)="pushPage('Circle')">
+            <img src="./assets/imgs/circle.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Circle</label>
+          </ion-slide>
+  
+          <ion-slide class="div_padding" (click)="pushPage('Rectangle')">
+            <img src="./assets/imgs/rectangle.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Rectangle</label>
+          </ion-slide>
+  
+          <ion-slide class="div_padding" (click)="pushPage('Pencil')">
+            <img src="./assets/imgs/pencil.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Pencil</label>
+          </ion-slide>
+  
+          <ion-slide class="div_padding" (click)="pushPage('Eraser')">
+            <img src="./assets/imgs/eraser.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Clear</label>
+          </ion-slide>
+  
+          <ion-slide class="div_padding" (click)="pushPage('Undo')">
+            <img src="./assets/imgs/undo.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Undo</label>
+          </ion-slide>
+  
+          <ion-slide class="div_padding" (click)="pushPage('Redo')">
+            <img src="./assets/imgs/redo.svg" style="height: 26px;width: 26px;" id="ionic-docs-text">
+            <label class="text_div">Redo</label>
+          </ion-slide>
+  
+          <ion-slide [ngClass]="(showBall==true)?'active':'div_padding'" (click)="pushPage('Football')">
+            <img src="./assets/imgs/football.svg" style="height: 40px;width: 40px;" id="ionic-docs-text">
+          </ion-slide>
+        </ion-slides>
+      </div>
+    </ion-col>
+  </ion-row>
+</div>

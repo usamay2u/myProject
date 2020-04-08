@@ -1,0 +1,76 @@
+tools {
+    ion-segment-button p
+    {
+        font-size: 8px;
+        margin-top: -8px;
+        text-transform: capitalize;
+        color: #fff;
+
+    }
+    ion-segment-button.segment-button.active {
+        background: #3053C7 !important;
+    }
+
+    .active {
+        background: #3053C7 !important;
+        height: 75px !important;
+        padding-top: 0px !important;
+    }
+
+    .selected
+        {
+            background:#122D88;
+            height: 75px !important;
+        }
+
+    .segment-md-secondary .segment-button {
+        padding-top: 10px !important;
+    }
+
+    .tool_div {
+        margin-top: 5px;
+    }
+
+    .slider_div {
+        position: relative;
+    }
+
+    .div_padding {
+        padding-top: 15px !important;
+    }   
+
+    .div_padding_ball {
+        padding-top: 5px !important
+    }
+
+    .text_div {
+        // font-family: 'Times New Roman', Times, serif;
+        color: white;
+        line-height: 1;
+        font-size: 10px;
+        display: block;
+        padding-top: 10px;
+    }
+
+    .section_height {
+        height: 75px;
+    }
+
+    .tool_img {
+        padding-top: 15px !important; 
+        width: 50px; 
+        height: 50px;
+    }
+
+    .tool_icon {
+        height: 30px;
+        width: 30px;
+    }
+
+    .outer_div {
+        padding: 0 5px !important;
+    }
+
+    
+
+}

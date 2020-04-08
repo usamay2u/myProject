@@ -1,0 +1,40 @@
+<div class="carousal-container">
+    <ion-row>
+      <ion-col col-2 class="off-team">
+        <div class="top-logo">
+          <img *ngIf="teamLogo" src="{{teamLogo}}" id="ionic-docs-text" style="pointer-events:none;height: auto !important;">
+          <img *ngIf="!teamLogo" src="././assets/imgs/no-logo.png" id="ionic-docs-text" style="pointer-events:none;height: auto !important;">
+          <p class="team-name">{{teamName}}</p>
+        </div>
+      </ion-col>
+      <ion-col col-8 main-team>
+        <!-- <ion-slides>
+           <ion-slide col-3 style="background:none;padding: 0 5px;font-size: 1px;" *ngFor="let row of activePlayerDetails"  (click)="changePlayer(row)" ion-long-press [interval]="1000" (onPressStart)="onPlayerClick()" >
+             <ion-icon  name="close"  (click)="onRemoveFromGround(row)" *ngIf="removePlayer == true"></ion-icon>
+             <img src="{{row.image}}" style="height: 40px;width: 40px;" id="ionic-docs-text" [ngClass]="(activeTab==row.id)?'activetab':'inactivetab'">
+             <label style="font-size:auto;font-family: 'Times New Roman', Times, serif;color: white;line-height: 1;">{{row.name}}</label>
+          </ion-slide>
+        </ion-slides> -->
+
+        <div class="slider_div">
+          <ion-icon ios="ios-arrow-back" md="ios-arrow-back" class="slider_back_arrow"></ion-icon>
+          <ion-slides slidesPerView="4">
+            <ion-slide *ngFor="let row of activePlayerDetails" (click)="changePlayer(row)" ion-long-press [interval]="1000" (onPressStart)="onPlayerClick()" class="div_padding">
+                <ion-icon  name="close"  (click)="onRemoveFromGround(row)" *ngIf="removePlayer == true"></ion-icon>
+                <img src="{{row.image}}" style="height: 40px;width: 40px;" id="ionic-docs-text" [ngClass]="(activeTab==row.id)?'activetab':'inactivetab'">
+                <label style="font-size:auto;font-family: 'Times New Roman', Times, serif;color: white;line-height: 1;">{{row.name}}</label>
+            </ion-slide>
+          </ion-slides>
+          <ion-icon ios="ios-arrow-forward" md="ios-arrow-forward" class="slider_right_arrow"></ion-icon>
+        </div>
+
+      </ion-col>
+
+      <ion-col col-2 class="col-player">
+        <!-- <button ion-button (click)="presentPage('PlayerAddPage')" >Add Jersey</button> -->
+        <img (click)=presentPage() src="./assets/imgs/add-player.svg" style="width: 40px;"/>
+        <p class="team-name">Add Player</p>
+      </ion-col>
+    </ion-row>
+
+  </div>

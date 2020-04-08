@@ -1,0 +1,355 @@
+// Ionic Variables and Theming. For more info, please see:
+// http://ionicframework.com/docs/theming/
+
+// Font path is used to include ionicons,
+// roboto, and noto sans fonts
+$font-path: "../assets/fonts";
+
+
+// The app direction is used to include
+// rtl styles in your app. For more info, please see:
+// http://ionicframework.com/docs/theming/rtl-support/
+$app-direction: ltr;
+
+
+@import "ionic.globals";
+
+
+// Shared Variables
+// --------------------------------------------------
+// To customize the look and feel of this app, you can override
+// the Sass variables found in Ionic's source scss files.
+// To view all the possible Ionic variables, see:
+// http://ionicframework.com/docs/theming/overriding-ionic-variables/
+
+
+
+
+// Named Color Variables
+// --------------------------------------------------
+// Named colors makes it easy to reuse colors on various components.
+// It's highly recommended to change the default colors
+// to match your app's branding. Ionic uses a Sass map of
+// colors so you can add, rename and remove colors as needed.
+// The "primary" color is the only required color in the map.
+
+$colors: (
+  primary:    #488aff,
+  secondary:  #32db64,
+  danger:     #f53d3d,
+  light:      #f4f4f4,
+  dark:       #222
+);
+
+
+// App iOS Variables
+// --------------------------------------------------
+// iOS only Sass variables can go here
+
+
+
+
+// App Material Design Variables
+// --------------------------------------------------
+// Material Design only Sass variables can go here
+
+
+
+
+// App Windows Variables
+// --------------------------------------------------
+// Windows only Sass variables can go here
+
+
+
+
+// App Theme
+// --------------------------------------------------
+// Ionic apps can have different themes applied, which can
+// then be future customized. This import comes last
+// so that the above variables are used and Ionic's
+// default are overridden.
+
+@import "ionic.theme.default";
+
+
+// Ionicons
+// --------------------------------------------------
+// The premium icon font for Ionic. For more info, please see:
+// http://ionicframework.com/docs/ionicons/
+
+@import "ionic.ionicons";
+
+
+// Fonts
+// --------------------------------------------------
+
+@import "roboto";
+@import "noto-sans";
+
+
+
+
+ .scroll-content {
+
+    padding: 0px !important;
+
+}
+.tabs-container
+{
+background:#1c3995 !important;
+padding: 12px 5px 12px 5px;
+position: fixed;
+width: 100%;
+bottom: 65px;
+z-index: 9999 !important;
+}
+.icon
+{
+color:#fff;
+
+}
+
+.segment-button
+{
+opacity:1 !important;
+border:none !important;
+
+}
+
+.segment-ios-secondary .segment-button
+{
+border:none;
+}
+
+.bar-footer
+{
+background:#3053c7;
+padding:0px;
+
+width: 100%;
+}
+
+.go
+{
+background: #fec70b;
+padding: 10px 10px 10px 10px;
+border-radius:5px;
+color:#fff;
+}
+.team
+{
+background: #fec70b;
+padding: 10px 10px 10px 10px;
+border-radius: 5px;
+color: #fff;
+}
+.list {
+    margin: -1px 2px 0px !important;
+}
+
+ .item-select
+
+{
+background: none !important;
+border: none !important;
+
+border-bottom: 1px solid #fff !important;
+color: #fff;
+
+}
+
+.list
+{
+width:90px !important;
+float:left;
+color:#fff;
+}
+ion-label
+{
+font-size: 12px !important;
+
+}
+.label {
+    margin: 11px -4px 11px 0 !important;
+	color: #fff !important;
+}
+.select .select-icon .select-icon-inner
+{
+color: #fff !important;
+left: -20px !important;
+}
+
+.scroll-content
+{
+    // background:url(../assets/imgs/bg.jpg)!important;
+    background-size: cover !important;
+}
+
+.modal_content
+{
+    background:url(../assets/imgs/pop-bg.png)!important;
+    background-size: cover !important;
+    // opacity:0.8;
+}
+
+.display
+{
+position: fixed;
+width: 100%;
+bottom: 124px;
+background: #091e57;
+z-index: 99999;
+}
+ion-app.ios .display
+{
+z-index: 999;
+bottom: 130px;
+}
+
+.swiper-container-horizontal > .swiper-pagination-bullets
+{
+
+display:block !important;
+
+}
+.swiper-pagination-bullet-active {
+    background: #fec70b !important;
+	}
+
+.ground-container img
+{
+// height:275px;
+//opacity: .5;
+//background: rebeccapurple;
+}
+
+.ground-container
+{
+    // padding-top: 138px;
+    // padding-left: 20%;
+    // padding-right: 40%;
+    // background:url(../assets/imgs/groundImg.png)!important;
+}
+
+.swiper-pagination-bullet
+{
+background: #3253c6 !important;
+opacity: 1 !important;
+
+
+}
+
+.swiper-pagination-bullet-active {
+    background: #fec70b !important;
+    opacity: 1;
+}
+
+.add-jersey
+{
+width: 50px;
+height: 50px !important;
+margin-top: 5px;
+}
+.segment-ios .segment-button
+{
+
+height: 4.2rem !important;
+}
+
+.scroll-content
+{
+overflow-y: hidden !important;
+
+}
+
+.toolbar-background
+{
+
+background: #3053c7 !important;
+}
+.toolbar-title
+{
+
+color:#fff !important;
+}
+
+.back-button-text
+{
+
+display:none !important;
+}
+
+.header-ios .toolbar-background-ios
+{
+
+border-color: rgb(48, 83, 199) !important;
+}
+.back-button-icon-ios
+{
+font-size: 2.4rem !important;
+
+}
+
+.segment-button img
+{
+
+margin:0px auto;
+display:block;
+}
+.segment-ios-secondary .segment-button:hover:not(.segment-activated) {
+    background:none !important;
+}
+
+.alert-head {
+    // background: #091e57;
+    // color: #fff;
+    // background: #4689f4 !important;
+    background: #1c3995 !important;
+    color: #ffffff !important;
+}
+
+.alert-message{
+    // background: #ffffff !important;
+    background: #a7c3d1 !important;
+    color:#383838 !important;
+}
+
+.alert-button-group{
+    // background: #091e57;
+    // color: #fff;
+    // background: #f5f5f5 !important;
+    background: #238de1 !important;
+}
+
+.alert-button{
+    color:#fff !important;
+    // border:none !important;
+    // color: #3175f4 !important;
+}
+
+.alert-radio-group{
+    border: none !important;
+    // background:#3053c7;
+    // background: #ffffff !important;
+    background: #a7c3d1 !important;
+}
+
+.alert-radio-icon{
+    // border-color:#fff !important;
+    // border-color: #383838 !important;
+    border-color: #3175f4 !important;
+}
+
+.alert-radio-label{
+    // color:#fff !important;
+    color: #383838 !important;
+}
+
+.swiper-pagination.hide.swiper-pagination-clickable.swiper-pagination-bullets {
+    display: none !important;
+}
+div#alert-msg-0 {
+    color: white;
+    padding-top: 20px;
+}

@@ -1,0 +1,184 @@
+// http://ionicframework.com/docs/theming/
+
+
+// App Global Sass
+// --------------------------------------------------
+// Put style rules here that you want to apply globally. These
+// styles are for the entire app and not just one component.
+// Additionally, this file can be also used as an entry point
+// to import other Sass files to be included in the output CSS.
+//
+// Shared Sass variables, which can be used to adjust Ionic's
+// default Sass variables, belong in "theme/variables.scss".
+//
+// To declare rules for a specific mode, create a child rule
+// for the .md, .ios, or .wp mode classes. The mode class is
+// automatically applied to the <body> element in the app.
+
+ion-backdrop {
+    z-index: -1 !important;
+    visibility: visible !important;
+    opacity: 0.5 !important;
+}
+
+.expand-wrapper {
+    transition: 0.2s linear;
+}  
+
+.collapsed {
+    height: 0 !important;
+}
+.ham .item {
+
+    background: transparent;
+   
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    padding-left:0px
+}
+
+.ham .list {
+    width: 100% !important;
+    float: left;
+    color: #fff;
+    margin:0px;
+}
+
+.ham
+{
+float: left;
+width: 100%;
+padding-top: 20px;
+padding-left: 10px;
+padding-right: 15px;
+
+}
+.team-box
+
+{
+background: #A5BED4;
+border-radius: 6px;
+padding: 10px 10px 10px 10px;
+float: left;
+width: 100%;
+border-bottom: 5px solid #1A7DC4;
+}
+
+.team-box img {
+    width: 50px;
+    float:left;
+}
+
+.team-box  h4
+{
+padding-top: 13px;
+padding-left: 21px;
+float: left;
+color:#020E6F;
+
+}
+
+.team-box .icon
+{
+float: right;
+font-size: 21px;
+padding-top: 13px;
+
+}
+
+.team-lineup
+{
+
+float:left;
+width:100%;
+}
+
+.team-lineup h4
+
+{
+background: none;
+border-right: 1px solid white;
+float: left !important;
+padding-right: 10px;
+
+}
+
+.team-lineup h6
+{
+float: left;
+padding-left: 10px;
+
+}
+
+.team-lineup .icon{
+    float: right;
+    font-size: 25px;
+    padding-top: 5px;
+    padding-right: 10px;
+}
+.team-formation{
+    background:#2099F2;
+    margin-top: -3px !important;
+}
+
+.myteam {
+    float: left;
+    width: 100%;
+    background: #040E70;
+    margin-top: 0px;
+    padding: 20px 22px
+}
+
+.myteam h3{
+    color:#fff;
+    margin:0px;
+    font-size: 16px;
+}
+
+.ham .item-inner{
+    border:none !important;
+    padding-right:0px !important;
+}
+
+.ham .label{
+    margin: 2px 3px 2px 5px !important;
+}
+
+.menu-inner .content-md{
+
+    .scroll-content {
+        padding: 16px;
+        background: url(../assets/imgs/bg.jpg)!important;
+        background-size: contain !important;
+        overflow-y: auto !important;
+    }
+} 
+
+.slider_right_arrow {
+    position: absolute;
+    right: -10px;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.div_back {
+    background: #040E70;
+}
+
+.about_main {
+    .toolbar-title{
+    font-size: 16px !important;
+    font-weight: unset !important;
+    }
+    
+}
+.Updatebtn{
+     position: sticky;
+     bottom: 0;
+     left: 0;
+     right: 0; 
+     width: 100%;
+     padding: 15px;  
+     background: #040E70;
+     color: #fff;
+}

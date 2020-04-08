@@ -1,0 +1,53 @@
+<ion-menu [content]="mycontent"  overflow-scroll="true">
+  <ion-header>
+    <ion-toolbar color="primary">
+      <ion-title>My Teams</ion-title>
+      <ion-buttons right>
+        <button ion-button icon-only (click)="exitFromApp()">
+          <label>Exit</label>
+          <ion-icon name="close-circle"></ion-icon>
+        </button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content scroll=false>
+    <div class="ham">
+      <!-- <ion-scroll style="width:100%;height:100px" scrollY="true"> -->
+        <ion-list scroll="true">
+          <ion-item *ngFor="let p of pages; let i=index" text-wrap (click)="toggleLevel1('idx'+i)" [ngClass]="{active: isLevel1Shown('idx'+i)}" class="team-name">
+            <div class="team-box">
+              <img *ngIf="p.logo" src="{{p.logo}}" style="height: 35px;width: 30px" />
+              <img *ngIf="!p.logo" src="././assets/imgs/no-logo.png" style="height: 35px;width: 30px">
+              <h4 >
+              {{p.category}}
+              </h4>
+              <ion-icon name="trash" (click)="deleteTeam(p.teamID, p.team_id, p.subs)"></ion-icon>
+            </div>
+
+            <!-- <ion-list *ngIf="isLevel1Shown('idx'+i)" class="team-formation" style="overflow-y:scroll">
+              <ion-item *ngFor="let s of p.subs; let i2=index" text-wrap  [ngClass]="{active: isLevel2Shown('idx'+i+'idx'+i2)}">
+                <div class="team-lineup">
+                  <h4>{{s.subcategory}}</h4>
+                  <h6> {{s.time}}</h6>
+                  <ion-icon name="create" (click)="editLineUp(s.id)"></ion-icon>
+                  <ion-icon name="trash" (click)="deleteLineUp(s.id, s.team_id)"></ion-icon>
+                </div>
+              </ion-item>
+            </ion-list> -->
+          </ion-item>
+        </ion-list>
+      <!-- </ion-scroll> -->
+    </div>
+  </ion-content>
+
+
+  <ion-footer menuClose>
+    <button class="Updatebtn" color="primary" (click)="clearTeamData()">Update Teams/League</button>
+    <ion-toolbar (click)="loadHomePage()" class="about_main">
+      <ion-title>About</ion-title>
+    </ion-toolbar>
+  </ion-footer>
+</ion-menu>
+
+<ion-nav #mycontent [root]="rootPage"></ion-nav>

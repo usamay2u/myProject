@@ -1,0 +1,48 @@
+<!-- 
+<ion-header></ion-header>
+<ion-content  padding>
+
+  <div class="ground-container">
+    <canvas class="canvasDefault" #imageCanvas  (touchstart)="mouseDown($event)" (touchend)="mouseUp($event)" (touchmove)="mouseMove($event)"  [ngClass]="(activeTabName=='Tools')?'canvasTools':'notcanvasTools'" [ngClass]="(activeTabName=='Tools')?'canvasTools':'notcanvasTools'" >
+      </canvas>
+    <img src={{groundImageSrc}} id="ionic-docs-text" #te>
+
+
+  </div>
+  <ground></ground>
+  <tabs *ngIf="saveClicked"></tabs>
+  <div [ngClass]="{ 'hide': !saveClicked }"  class="display dispaly-ios ">
+    <div #processContainer ></div>
+  </div>
+</ion-content>
+<footer *ngIf="saveClicked"></footer> -->
+<ion-header></ion-header>
+
+<ion-content no-bounce>
+<div class="ground-container">
+    <!-- <p>Helloooooooooooo</p> -->
+    <canvas [hidden]="showTool==''"
+      class="canvasDefault" 
+      #imageCanvas  
+      (touchstart)="mouseDown($event)" 
+      (touchend)="mouseUp($event)" 
+      (touchmove)="mouseMove($event)"  
+      [ngClass]="(activeTabName=='Tools')?'canvasTools':'notcanvasTools'" 
+      [ngClass]="(activeTabName=='Tools')?'canvasTools':'notcanvasTools'" > 
+  </canvas>
+
+    <!-- <canvas *ngIf="activeTool == 'Arrow'" class="canvasDefault" #imageCanvas  (touchstart)="handleStart($event)" (touchend)="handleMove($event)"   [ngClass]="(activeTabName=='Tools')?'canvasTools':'notcanvasTools'" [ngClass]="(activeTabName=='Tools')?'canvasTools':'notcanvasTools'" >
+    </canvas>   -->
+  <img *ngIf="groundImageSrc" src={{groundImageSrc}} style="max-width: 100%; height: auto;" id="ionic-docs-text" #te>
+  <!-- <img *ngIf="groundImageSrc" src="assets/imgs/ground_img.jpg" style="max-width: 100%; height: auto;" id="ionic-docs-text" #te> -->
+</div>
+<ground></ground>
+
+<div [ngClass]="{ 'hide': !saveClicked }"  class="display dispaly-ios display_new">
+  <div #processContainer ></div>
+</div>
+
+<tabs *ngIf="saveClicked" class="tabs_div tabs_cont"></tabs>
+</ion-content>
+
+<footer *ngIf="saveClicked" class="footer_div"></footer>

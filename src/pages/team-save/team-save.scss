@@ -1,0 +1,118 @@
+page-team-save {
+    .main-view{
+        background: transparent;
+      }
+      .overlay {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .5;
+        background-color: #333;
+      }
+      .team_modal_content {
+        background:url(../assets/imgs/pop-bg.png)!important;
+        background-size: cover !important;
+        position: absolute;
+        top: calc(50% - (50%/2));
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 64%;
+        padding: 10px;
+        z-index: 100;
+        margin: 0 auto;
+        padding: 10px;
+        color: #333;
+        background: #e8e8e8;
+        background: -moz-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+        background: -webkit-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+        background: linear-gradient(to bottom, #fff 0%, #e8e8e8 100%);
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(51, 51, 51, .35);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        overflow: hidden;
+      }
+
+      .save_button {
+        margin: 0 auto;
+        display: table;
+        background: #24ba32;
+      }
+	
+
+.modal_content h4
+{
+
+color:#fdc70b;
+text-align:center;
+}
+
+.close {
+ color: white;
+right: 0px;
+position: absolute;
+z-index: 999;
+top: 165px !important;
+padding: 15px;
+}
+
+.share
+{
+
+padding-top:20px;
+}
+
+
+
+.share img
+{
+
+width:40px;
+}
+
+.share .text-input
+{
+    background:#b1dbfb !important;
+	margin-left:0px !important;
+}
+
+
+
+.share button
+{
+
+background:#24ba32;
+font-size: 12px;
+}
+
+
+
+.activated
+{
+background:transparent !important;
+}
+
+.border
+{
+border-right: 2px solid #ffffff1a;
+
+}
+
+.social
+{
+background:rgba(0, 32, 90, 0.78);
+position: absolute;
+left: 0px;
+width: 100%;
+bottom: 0px;
+}
+
+
+}
+
+
+

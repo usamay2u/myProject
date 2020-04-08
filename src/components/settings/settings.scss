@@ -1,0 +1,184 @@
+settings {
+
+    .list {
+		width: 100% !important;
+    }
+    
+    // .label {
+	// 	margin: 21px -4px 0px 0 !important;
+	// }
+
+    // ion-select
+	// {
+    //     max-width:100% !important;
+    //     color: #fff !important;
+	// 	padding: 27px 0px 0px 0px !important;
+	// 	font-size: 12px !important;
+	// }
+
+	// .select .select-icon .select-icon-inner {
+	// 	color: #fff !important;
+	// 	left: -10px !important;
+	// }
+
+	input::placeholder
+	{
+	    color:#fff;
+	}
+	
+	.select
+	{
+        border-bottom: 1px solid #fff !important;
+        max-width: 100%;
+        color:#fff;
+        width: 100%;
+	}
+	
+	.selects
+		{
+		
+    width: 100%;
+    max-width: 100%;
+    margin-top: 16px;
+    color: #fff;
+    font-size: 11px;
+
+		
+		}
+	
+		input
+		{
+		border-bottom:1px solid #fff !important;
+		
+		}
+		.tabs-container .button
+ {
+ background-color:#1c3995 !important;
+ box-shadow:none
+ }
+ 
+ .jersey-display
+ {
+ padding-top:10px;
+ 
+ }
+ 
+ h4
+ {
+ color:#fdc70b;
+ text-align:center;
+ 
+ }
+ 
+ .checkbox-icon
+ {
+ background:none !important;
+ border-radius:0px !important;
+ border:none !important;
+ 
+ }
+ 
+ .checkbox{
+    width: 15px;
+    height: 15px;
+     background: transparent url(../assets/imgs/check.png ) no-repeat 0 50%
+}
+.checked{
+    background: transparent url(../assets/imgs/checked.png ) no-repeat 80% 50%
+}
+.tabs-container 
+{
+color:#fff;
+font-size:10px
+
+}
+
+.left
+{
+width:50%;
+float:left;
+text-align:center;
+color:#fff;
+}
+.right
+{
+color:#fff;
+float:left;
+width:50%;
+}
+
+ .jersey-display img
+ {
+ 
+display: block;
+margin: 0px auto; }
+.close
+{
+color: #fff;
+right: 10px;
+position: absolute;
+top: 180px !important;
+z-index: 999;
+
+}
+.button-add
+{
+
+background:#26BA2E;
+margin:0px auto;
+display:block;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+	border-radius:5px;
+}
+
+.button-upload
+{
+width:100%;
+font-size:9px;
+margin-top:-7px;
+}
+
+
+
+.text-input::placeholder
+{
+color:#fff !important;
+font-size:12px;
+}
+.close {
+    color: white;
+    right: 10px;
+    position: absolute;
+    z-index: 999;
+    top: 180px !important;
+}
+
+.select {
+    padding: 0px 8px 10px 16px !important;
+}
+
+input.text-input.text-input-md {
+    color: #fff;
+}
+
+}
+.jersey-display{
+  .item-inner{
+     padding-right: 0 !important;
+       .label-md{
+        margin: 11px -80px 11px 8px !important;
+        color: #fff !important;
+        width: 100%!important;
+       }
+       .select-md{
+        padding: 14px 0px 13px 0px!important;
+        width: 100%!important;
+        border-bottom:none!important;
+        .select-icon{
+            width: auto!important;
+            height: auto!important;
+        }
+       }
+     }
+}
