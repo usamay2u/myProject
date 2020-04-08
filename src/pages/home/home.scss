@@ -1,0 +1,40 @@
+page-home {
+    .home {
+        float:left;
+        width:100%;
+        padding:0px 10px 0px 10px;
+        background: #0006;
+        height:100%;
+    }
+
+    .home p {
+        color:#fff;
+        text-align:justify;
+        text-justify: distribute;
+    }
+
+    .home h4 {
+        color:#31da1f;
+        text-align:center;
+    }
+
+    .home img {
+        margin:0px auto;
+        display:block;
+        padding-top:30px;
+    }
+
+    .content-md {
+        .scroll-content {
+            padding: 16px;
+            background: url(../assets/imgs/bg.jpg)!important;
+            // background-size: contain !important;
+            background-size: cover !important;
+            overflow-y: auto !important;
+        }
+    }
+
+    .content_div {
+        padding-bottom: 60px !important;
+    }
+}

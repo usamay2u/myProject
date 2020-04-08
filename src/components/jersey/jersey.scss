@@ -1,0 +1,33 @@
+jersey {
+    .selected
+        {
+            background:#122D88;
+        }
+
+    .slider_div {
+        position: relative;
+    
+        .slider_back_arrow {
+            position: absolute;
+            top: 50%;
+            left: -5px;
+            transform: translate(-50%, -50%);
+        }
+    
+        .slider_right_arrow {
+            position: absolute;
+            right: -10px;
+            top: 50%;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .team-name {
+        font-size: 8px;
+        color: #fff;
+        margin: 0 0;
+        text-transform: capitalize;
+        line-height: 1.5;
+        text-align: center;
+    }
+}

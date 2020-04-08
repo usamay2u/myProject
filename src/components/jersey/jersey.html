@@ -1,0 +1,21 @@
+<!-- Generated template for the JerseyComponent component -->
+<div class="carousal-container">
+  <ion-row>
+      <ion-col col-2 class="selected">  <img *ngIf="selectedJersey" style="padding-top: 5px !important; width: 57px; height: 57px;" src="{{selectedJersey}}"/></ion-col>
+      <ion-col col-8>
+        <div class="slider_div">
+            <ion-slides slidesPerView="4">
+                <ion-slide *ngFor="let row of jerseys" (click)="changeJersey(row)" style="padding-top: 5px !important;">
+                    <img *ngIf="row.image" style="width: 57px; height: 57px;" src="{{row.image}}" id="ionic-docs-text">
+                </ion-slide>
+            </ion-slides>
+        </div>
+      </ion-col>
+
+      <ion-col col-2>
+          <!-- <button ion-button (click)="presentPage('PlayerAddPage')" >Add Jersey</button> -->
+          <img src="./assets/imgs/add-jersey.svg" (click)=presentPage()/>
+          <p class="team-name">Add Jersey</p>
+      </ion-col>
+  </ion-row>
+</div>

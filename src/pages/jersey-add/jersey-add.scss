@@ -1,0 +1,155 @@
+page-jersey-add {
+    .main-view{
+        background: transparent;
+    }
+
+    .overlay {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .5;
+        background-color: #333;
+    }
+
+    .jersey_modal_content {
+        background:url(../assets/imgs/pop-bg.png)!important;
+        background-size: cover !important;
+        position: absolute;
+        // top: calc(50% - (50%/2));
+        bottom: 20%;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 55%;
+        z-index: 1;
+        margin: 0 auto;
+        padding: 0px;
+        color: #333;
+        background: #e8e8e8;
+        background: -moz-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+        background: -webkit-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+        background: linear-gradient(to bottom, #fff 0%, #e8e8e8 100%);
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(51, 51, 51, .35);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        overflow: hidden;
+    }
+      
+    .name_label {
+        color: #fec70b;
+        padding-right: 50px;
+        font-weight: bold;
+    }
+
+
+ .tabs-container .button
+ {
+ background-color:#1c3995 !important;
+ box-shadow:none
+ }
+ 
+ .jersey-display
+ {
+ padding-top:10px;
+ 
+ }
+ 
+ h4
+ {
+ color:#fdc70b;
+ text-align:center;
+ 
+ }
+ 
+ .checkbox-icon
+ {
+ background:none !important;
+ border-radius:0px !important;
+ border:none !important;
+ 
+ }
+ 
+ .checkbox{
+    width: 23px;
+    height: 21px;
+     background: transparent url(./assets/imgs/check.png ) no-repeat 0 50%
+}
+.checked{
+    background: transparent url(./assets/imgs/checked.png ) no-repeat 80% 50%
+}
+.tabs-container 
+{
+color:#fff;
+font-size:10px;
+z-index: 9999;
+}
+
+.left
+{
+width:50%;
+float:left;
+text-align:center;
+color:#fff;
+}
+.right
+{
+color:#fff;
+float:left;
+width:50%;
+}
+
+ .jersey-display img
+ {
+ 
+display: block;
+margin: 0px auto; }
+.close
+{
+    color: white;
+    right: 10px;
+    position: absolute;
+    z-index: 2;
+    top: 10px !important;
+    font-size: x-large !important;
+}
+.button-add
+{
+
+background:#26BA2E;
+margin:0px auto;
+display:block;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+	border-radius:5px;
+}
+
+.tabs-container
+{
+    bottom: 65px !important;
+}
+
+.tabs-container.colorspick
+{
+    bottom: 146px !important;
+    z-index: 9999;
+}
+
+span.colorspan {
+    width: 30px;
+    height: 30px;
+    background: white;
+    position: absolute;
+    border-radius: 50%;
+    bottom: 5px;
+    border: 2px #ffffff solid;
+}
+
+img#ionic-docs-text {
+    width: 35px;
+}
+
+}

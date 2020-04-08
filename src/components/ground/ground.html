@@ -1,0 +1,95 @@
+<!-- Generated template for the GroundComponent component -->
+
+<div class="top-head">
+  <ion-grid>
+    <ion-row>
+      <ion-col col-4>
+      </ion-col>
+
+      <ion-col col-4>
+        <img src="././assets/imgs/logo.png" style="width: 80%;margin: 0 auto;display: table;margin-top: 10px;">
+      </ion-col>
+
+      <ion-col col-1> </ion-col>
+
+      <ion-col col-3 class="sub_div">
+        <div class="sub" *ngIf=showSubstitute>
+          <ion-card id="sub{{row.id}}" class="pulse" style="background:none;height: auto;width: auto;" *ngFor="let row of substitutePlayerDetails" (click)="changePlayer(row)" [hidden]="row.type_of_sub">
+            <div class="sub_image_div">
+              <!-- <img src="{{row.image}}" style="pointer-events:none; width: 100%;" [ngClass]="(activeTab==row.id)?'activetab':'inactivetab'" /> -->
+              <img *ngIf="row.image" src="{{row.image}}" style="pointer-events:none; max-width: 100%; height: auto;" [ngClass]="(activeTab==row.id)?'activetab':'inactivetab'" />
+            </div>
+            <span style="pointer-events:none">{{row.jerseyNo}}</span>
+            <p style="pointer-events:none; padding: 0px 5px 0px 10px; width: 100% !important;">
+              {{row.name}}
+            </p>
+          </ion-card>
+
+          <ion-card id="sub{{substitute_goalkeeper.id}}" class="pulse" style="background:none;height: auto;width: auto; top: 25px !important;
+          position: absolute; right: 0;" (click)="changePlayer(substitute_goalkeeper)" [hidden]="!substitute_goalkeeper.type_of_sub">
+            <div class="sub_image_div">
+              <!-- <img src="{{substitute_goalkeeper.image}}" style="pointer-events:none; width: 100%;" [ngClass]="(activeTab==substitute_goalkeeper.id)?'activetab':'inactivetab'" /> -->
+              <img *ngIf="substitute_goalkeeper.image" src="{{substitute_goalkeeper.image}}" style="pointer-events:none; max-width: 100%; height: auto;" [ngClass]="(activeTab==substitute_goalkeeper.id)?'activetab':'inactivetab'" />
+            </div>
+            <span style="pointer-events:none">{{substitute_goalkeeper.jerseyNo}}</span>
+            <p style="pointer-events:none; padding: 0px 5px 0px 10px; width: 100% !important;">
+              {{substitute_goalkeeper.name}}
+            </p>
+          </ion-card>
+        </div>
+        <p class="sub-title" *ngIf=showSubstitute>Substitutes</p>
+      </ion-col>
+
+    </ion-row>
+  </ion-grid>
+</div>
+
+
+
+<!-- startLeft="{{row.left}}" startTop="{{row.top}}" -->
+<ion-item>
+  <ion-label>Select the option</ion-label>
+  <ion-select #swapOrSubstitute (ionChange)="swapOrSubstituteSelected($event)" [hidden]="true">
+    <ion-option value="swap">Swap</ion-option>
+    <ion-option value="substitute">Substitute</ion-option>
+  </ion-select>
+</ion-item>
+<ion-card id="active{{row.id}}" class="pulse" (click)="swapThisImage(row)" absolute-drag  style="background:none;height: auto; width: auto !important;" *ngFor="let row of activePlayerDetails; index as i" [hidden]="i >= groundPlayerCount"  ion-long-press [interval]="1000" (onPressStart)="onPlayerClick()" >
+  <div class="image_div">
+    <!-- <img src="{{row.image}}" style="pointer-events:none; width: 100%;" /> -->
+    <img src="{{row.image}}" style="pointer-events:none; max-width: 100%; height: auto;" />
+  </div>
+  <span style="pointer-events:none">{{row.jerseyNo}}</span>
+  <p style="pointer-events:none; padding: 0px 5px 0px 10px; width: 100% !important;">
+    {{row.name}}
+  </p>
+  <p *ngFor="let substitutePlayer of row.substitutedPlayers" style="pointer-events:none; padding: 0px 5px 0px 10px; width: 100% !important;">
+    {{substitutePlayer.name}}
+  </p>
+</ion-card>
+
+<ion-item>
+  <ion-label>Select the option</ion-label>
+  <ion-select #swapOrSubstituteGoalKeeper (ionChange)="swapOrSubstituteGoalKeeper($event)" [hidden]="true">
+    <ion-option value="swap">Swap</ion-option>
+    <ion-option value="substitute">Substitute</ion-option>
+  </ion-select>
+</ion-item>
+<ion-card id="activeGoali{{row.id}}" style="background:none;height: auto; width: auto !important;" *ngFor="let row of goalKeeperArray" absolute-drag startLeft="{{goali_width}}" startTop="{{goali_heigth}}" (click)="swapTheGoalKeeper(row)">
+  <div class="image_div">
+    <!-- <img src="{{row.image}}" style="pointer-events:none; width: 100%;" /> -->
+    <img *ngIf="row.image" src="{{row.image}}" style="pointer-events:none; max-width: 100%; height: auto;" />
+  </div>
+  <span style="pointer-events:none">{{row.jerseyNo}}</span>
+  <p style="pointer-events:none; padding: 0px 5px 0px 10px; width: 100% !important;">
+    {{row.name}}
+  </p>
+  <p *ngFor="let substitutePlayer of row.substitutedPlayers" style="pointer-events:none; padding: 0px 5px 0px 10px; width: 100% !important;">
+    {{substitutePlayer.name}}
+</ion-card>
+
+<ion-card style="background:none;height: auto; width: auto !important;" absolute-drag startLeft="{{ball_width}}" startTop="{{ball_height}}"  *ngIf="showBall">
+  <div class="ball_div">
+    <img src="./assets/imgs/football_small.svg" />
+  </div>
+</ion-card>

@@ -1,0 +1,108 @@
+page-team-add {
+    .main-view{
+        background: transparent;
+       }
+      .overlay {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        opacity: .5;
+        background-color: #333;
+      }
+      .team_modal_content {
+        background:url(../assets/imgs/pop-bg.png)!important;
+        background-size: cover !important;
+        position: absolute;
+        top: calc(50% - (50%/2));
+        left: 0;
+        right: 0;
+        width: 100%;
+        height:65%;
+        padding: 10px;
+        z-index: 100;
+        margin: 0 auto;
+        padding: 10px;
+        color: #333;
+        background: #e8e8e8;
+        background: -moz-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+        background: -webkit-linear-gradient(top, #fff 0%, #e8e8e8 100%);
+        background: linear-gradient(to bottom, #fff 0%, #e8e8e8 100%);
+        border-radius: 5px;
+        box-shadow: 0 2px 3px rgba(51, 51, 51, .35);
+        box-sizing: border-box;
+        -moz-box-sizing: border-box;
+        -webkit-box-sizing: border-box;
+        overflow-y: scroll;
+      }
+
+	  
+	  .button-add
+{
+
+background:#26BA2E;
+margin:0px auto;
+display:block;
+    padding: 10px 20px 10px 20px;
+    color: #fff;
+	border-radius:5px;
+	margin-top:30px;
+	width:35%;
+
+}
+
+.texts-input
+{
+border-bottom: 1px solid white;
+color:#fff;
+}
+
+input[type='file'] {
+  color: transparent;
+}
+
+ #file-input {
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  left: 0;
+  z-index: 999;
+}
+
+.right button
+{
+width:70% !important;
+margin:0px auto;
+display:block;
+margin-top:8px;
+background:#24ba32;
+font-size:12px
+}
+
+.modal_content h4
+{
+
+color:#fdc70b;
+text-align:center;
+}
+
+.close {
+    color: rgb(255, 255, 255);
+    right: 0px;
+    position: absolute;
+    z-index: 999;
+        top: 160px !important;
+    padding: 10px;
+}
+
+input::placeholder
+{
+color:#fff !important;
+
+}
+}
+
+

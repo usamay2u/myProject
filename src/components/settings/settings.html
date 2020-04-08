@@ -1,0 +1,98 @@
+<!-- Generated template for the SettingsComponent component -->
+<div>
+
+  <div class="jersey-display">
+    <ion-grid>
+      <ion-row>
+        <ion-col col-4>
+          <!-- <ion-input type="text" value="" placeholder=" Team Name"></ion-input> -->
+          <!-- <label>{{activeTeamName}}</label> -->
+          <ion-input type="text" value="" placeholder="{{activeTeamName}}" readonly></ion-input>
+        </ion-col>
+
+        <ion-col col-4>
+          <ion-list>
+            <ion-item>
+              <ion-label  style="padding: 0 0; display: none;">Select Player Count</ion-label>
+              <ion-select [(ngModel)]="playerCount" (ionChange)="numberPlayerSelected($event)">
+                <!-- <ion-option  value="0" (cancel)="onCancel()" selected >Player Count</ion-option> -->
+                <ion-option *ngFor="let players of numberPlayersList" value="{{players.playerNumber}}" (cancel)="onCancel()">{{players.playerNumber}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col col-4>
+          <div class="selects">
+            <ion-checkbox class="checkbox" (ionChange)="onShowSubstitute()" [checked]="showSubstitute"> </ion-checkbox> Show Substitutes 
+          </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-4> 
+          <!-- <ion-input type="text" value="" placeholder="LineUpName" readonly></ion-input>  -->
+        </ion-col>
+
+        <ion-col col-4>
+          <ion-list>
+            <ion-item>
+              <ion-label  style="padding: 0 0; display: none;">Select Formation</ion-label>
+              <ion-select [(ngModel)]="formation" (ionChange)="formationSelected($event)">
+                <!-- <ion-option  value="0" (cancel)="onCancel()" selected >Formation</ion-option> -->
+                <ion-option *ngFor="let row of formationList" value="{{row.id}}" (cancel)="onCancel()">{{row.formationText}}</ion-option>
+              </ion-select>
+            </ion-item>
+          </ion-list>
+        </ion-col>
+
+        <ion-col col-4>
+          <div class="selects">
+            <ion-checkbox class="checkbox" (ionChange)="onShowMananger()" [checked]="showManager"> </ion-checkbox> Show Manager </div>
+        </ion-col>
+      </ion-row>
+
+      <ion-row>
+        <ion-col col-4>
+            <ion-input [(ngModel)]="opponentName" type="text" value="" placeholder="Opponent Name" (ionChange)="settingsTyping()" ></ion-input>
+        </ion-col>
+        
+        <ion-col col-4>
+          <ion-input [(ngModel)]="lineupName" type="text" value="" placeholder="Line Up Name" (ionChange)="settingsTyping()" ></ion-input>
+        </ion-col>
+
+        <ion-col col-4>
+          <!-- <ion-segment-button (click)="pushPage('Save')" >
+                <img id="ionic-docs-text" src="./assets/imgs/save-button.png">
+               
+             </ion-segment-button> --> 
+        </ion-col>
+      </ion-row>
+
+      <!-- <ion-row>
+        <ion-col col-4>
+          <ion-select [(ngModel)]="opponent" (ionChange)="opponentSelected($event)">
+            <ion-option *ngFor="let row of opponentList" value="{{row.id}}" (cancel)="onCancel()">{{row.name}}</ion-option>
+          </ion-select>
+        </ion-col>
+        <ion-col col-4>
+          <ion-input type="text" value="" placeholder="My Soccer11" readonly></ion-input>
+        </ion-col>
+
+        <ion-col col-4>
+          <!-- <ion-segment-button (click)="pushPage('Save')" >
+                <img id="ionic-docs-text" src="./assets/imgs/save-button.png">
+               
+             </ion-segment-button> 
+        </ion-col>
+      </ion-row> -->
+
+
+
+    </ion-grid>
+
+
+
+  </div>
+
+</div>

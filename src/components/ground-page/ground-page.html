@@ -1,0 +1,14 @@
+<!-- Generated template for the GroundPageComponent component -->
+<ion-footer>
+  <div class="bar bar-footer bar-balanced">
+    <ion-slides slidesPerView="3">
+      <ion-slide col-3 style="background:none" *ngFor="let row of grounds" (click)="changeGround(row)">
+           <img src="{{row.image}}" id="ionic-docs-text"> 
+         
+          <!--src="../../assets/imgs/liver.png"-->
+      </ion-slide>
+
+
+  </ion-slides>
+</div>
+</ion-footer>

@@ -1,0 +1,80 @@
+page-team-default {
+.player {
+    height : 40px;
+    width:40px
+}
+.canvasDefault {
+    display: block;
+    position:absolute;
+	width:100%;
+	height:100%
+}
+.color-block {
+    height: 40px;
+}
+.canvasTools {
+    display: block;
+    position: absolute;
+    //height: 230px;
+    height: 100%;
+    z-index: 9000;
+    width: 100%;
+    // padding-left: 20%;
+    //padding-right: 40%;
+    //left: 20%;
+    //margin-right: 20%;
+}
+.notcanvasTools{
+    display: block;
+    position: absolute;
+    height: 100%;
+    z-index: 0;
+    width: 100%;
+    // padding-left: 20%;
+    // padding-right: 20%;
+}
+
+ion-segment-button p
+{
+    font-size: 8px;
+    margin-top: -8px;
+    text-transform: capitalize;
+    color: #fff;
+
+}
+.content-md{
+
+        .scroll-content {
+            padding: 16px;
+            background: url(../assets/imgs/background.png)!important;
+            background-size: contain !important;
+        }
+    } 
+
+// .tabs_div {
+//     position: fixed;
+//     width: 100%;
+//     bottom: 52px;
+//     z-index: 9999 !important;
+//     background: #1c3995 !important;
+// }
+
+// .footer_div {
+//     bottom: 0px;
+//     position: fixed;
+//     z-index: 10;
+//     display: block;
+//     width: 100%;
+//     height: 53px;
+// }
+
+// .display_new {
+//     position: fixed;
+//     width: 100%;
+//     bottom: 110px;
+//     background: #091e57;
+//     z-index: 999;
+// }
+ 
+}
+
